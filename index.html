@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Non, on triche pas!</title>
+    <meta name="description" content="">
+    
+    <!-- les liens -->
+    <!-- Notre css-->
+    <link rel="stylesheet" href="css/css.css">
+    <!--Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Homemade+Apple|Roboto" rel="stylesheet"> 
+    
+    
+</head>
+<body>
+    <div class="container-fluid
+">
+    <!-- le titre-->
+        <header>
+            <h1 style="
+            font-family: 'Homemade Apple', cursive;font-family: 'Roboto', sans-serif;">On ne triche pas ! </h1>
+        </header>
+
+    <!-- section avec le temps et le recommencé --> 
+        <section class="time_hit_restard">
+            <div id="nbHit">Nombre de coup : <span class="nbHit"> </span> 
+                <div id="timer">Timer : <span class="timer"></span> </div>
+            </div>
+            <div> 
+                <button id="restard" type="button" onclick="letsPlay.Restard()">recommencez!</button> 
+            </div>
+        </section>
+
+    <!-- liste de cartes -->
+        <div id="game" class="deck grid_container">
+            
+        </div>            
+    </div>
+
+    <!--les liens -->
+
+    <script type="text/javascript" src="js/memoryCards.js"></script>  
+</body>
+</html>

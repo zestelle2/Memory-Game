@@ -1,0 +1,205 @@
+*,
+*::before,
+*::after {
+  box-sizing: content-box;
+}
+
+body {
+  margin: 20px ;
+}
+
+.pop{
+    display:none;
+}
+.pop .open{
+    display: block;
+}
+
+.grid {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.card {
+   margin: 5px;
+  border: 4px solid black;
+  height: 150px;
+  width: 150px;
+  font-size: 100px;
+  text-align: center;
+  padding-top: 1.5%;
+  border-radius: 20%; 
+
+  position: relative;
+    -webkit-transition: all 100ms ease-in;
+    -o-transition: all 100ms ease-in;
+    transition: all 100ms ease-in;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+	border: 4px solid black;
+	box-shadow: 0px 0px 0px 0px black;
+	margin: 5px;
+	text-align: center;
+	overflow: hidden;
+	cursor: pointer;
+}
+
+
+/* animations */
+@keyframes flipInY {
+    from {
+        transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+        animation-timing-function: ease-in;
+        opacity: 0;
+    }
+
+    40% {
+        transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+        animation-timing-function: ease-in;
+    }
+
+    60% {
+        transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+        opacity: 1;
+    }
+
+    80% {
+        transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
+    }
+
+    to {
+        transform: perspective(400px);
+    }
+}
+@keyframes rubberBand {
+    from {
+        transform: scale3d(1, 1, 1);
+    }
+
+    30% {
+        transform: scale3d(1.25, 0.75, 1);
+    }
+
+    40% {
+        transform: scale3d(0.75, 1.25, 1);
+    }
+
+    50% {
+        transform: scale3d(1.15, 0.85, 1);
+    }
+
+    65% {
+        transform: scale3d(.95, 1.05, 1);
+    }
+
+    75% {
+        transform: scale3d(1.05, .95, 1);
+    }
+
+    to {
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+@keyframes pulse {
+    from {
+        transform: scale3d(1, 1, 1);
+    }
+
+    50% {
+        transform: scale3d(1.1, 1.1, 1.1);
+    }
+
+    to {
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+.card,
+.front,
+.back {
+    height: 150px;
+    width: 150px;
+}
+
+.back,
+.front {
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.back {
+    transform: rotateY(180deg);
+    background-color: white;
+}
+
+.selected .back{
+  backface-visibility: visible;
+
+}
+
+.card.selected {
+    transform: rotateY(180deg);
+    cursor: default;
+    animation-name: flipInY;
+    -webkit-backface-visibility: visible !important;
+    backface-visibility: visible !important;
+    animation-duration: .75s;
+}
+
+.card.match {
+    cursor: default;
+    background: PaleGreen;
+    animation-name: rubberBand;
+    -webkit-backface-visibility: visible !important;
+    backface-visibility: visible !important;
+    animation-duration: .75s;
+}
+.card.match .back {
+    transform: rotateY(0deg);
+    background: PaleGreen;
+}
+
+.card.unmatch,
+.card.unmatch .back {
+    animation-name: pulse;
+    -webkit-backface-visibility: visible !important;
+    backface-visibility: visible !important;
+    animation-duration: .75s;
+    background-color: Tomato;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 5%;
+    margin-top: 5%;
+    font-family: 'Homemade Apple' !important;
+    font-size: 22px;
+    font-size: 22px;
+}
+
+#nbHit,
+#timer{
+    text-align: center;
+    font-weight: bolder;
+   
+    
+}
+.time_hit_restard{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#restard{
+    margin: auto;
+    background-color: yellow;
+    border: 4px solid black;
+    font-weight: bolder;
+    
+    
+}
+
