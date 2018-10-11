@@ -17,3 +17,6 @@ _ **fnbHit** : méthode qui compte le nombre de coups joué.
 
 ## Les éléments Dom
 Ce jeu est un exellent exercice pour modifier et intéragir avec les éléments du dom.
+
+## Visulation en live avec gitlab :
+https://zestelle2.gitlab.io/dernieressais/
