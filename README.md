@@ -7,7 +7,7 @@ J'ai réalisé un jeu de mémoire avec en tout 8 paires sans utiliser Jquery ( O
 Ce jeu à été réalisé entièment en programmation Objet. Nous avons 9 méthodes: 
 _ **le constructeur** : définie le deck du jeu, initialise les varibale du temps et le nombre de coup. 
 _ **start** : commence le Jeu. Ici, tout se joue au clics, à chaque clic l'utilisateur déclanche les différents événements.
-_ **match** : C'est la méthode qui permet d'itenfier les cartes identique.
+_ **match** : C'est la méthode qui permet d'itenfier les cartes identiques.
 _ **unmatch** : le contraire de match
 _ **resetChoices** : le joueur peut reéssayer de selectionner deux cartes.
 _ **gg** : et la méthode qui gère et affiche la victoire. 
